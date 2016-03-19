@@ -10,7 +10,6 @@ const rootEl = document.getElementById("root")
 function render() {
   ReactDOM.render(
     <div>
-      <p>Redux is a steely-eyed missile man.</p>
       <Counter
         value={store.getState()}
         onIncrement={() => store.dispatch({ type: "INCREMENT" })}
