@@ -1,9 +1,12 @@
-export default function counter(state = 0, action) {
+import Remarkable from "remarkable"
+const md = new Remarkable();
+
+export default function markdown(state = { contentMD: "## A", contentHTML: "" }, action) {
   switch (action.type) {
-    case "INCREMENT":
-      return state + 2
-    case "DECREMENT":
-      return state - 2
+    case "TO_HTML":
+      console.log("TO HTML")
+      console.log(state)
+      return { contentMD: state.contentMD, contentHTML: md.render(state.contentMD) }
     default:
       return state
   }

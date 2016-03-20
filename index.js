@@ -1,24 +1,18 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import { createStore } from "redux"
-import Counter from "./components/Counter"
-import counter from "./reducers"
+import EditorContainer from "./containers/EditorContainer"
+import Remarkable from "remarkable"
 
-const store = createStore(counter)
+//const store = createStore(markdown)
 const rootEl = document.getElementById("root")
 
 function render() {
   ReactDOM.render(
-    <div>
-      <Counter
-        value={store.getState()}
-        onIncrement={() => store.dispatch({ type: "INCREMENT" })}
-        onDecrement={() => store.dispatch({ type: "DECREMENT" })}
-      />
-    </div>,
+    <EditorContainer />,
     rootEl
   )
 }
 
 render()
-store.subscribe(render)
+//store.subscribe(render)

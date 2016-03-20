@@ -27,6 +27,7 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-register": "^6.3.13",
+    "remarkable": "^1.6.2",
     "cross-env": "^1.0.7",
     "enzyme": "^2.0.0",
     "expect": "^1.6.0",
