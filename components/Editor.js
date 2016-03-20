@@ -7,15 +7,10 @@ export default class Editor extends Component {
 
   render() {
     return (
-      <div>
+      <div className="editor">
         <p>Markdown Content:</p>
-        <textarea id="ta-editor" value={ this.props.contentMd } onChange={ this.props.updatePreview }>
+        <textarea id="editor-content" value={ this.props.contentMd } onChange={ this.props.updatePreview }>
         </textarea>
-        <p>Rendered Content:</p>
-        <p dangerouslySetInnerHTML={ {__html: this.props.contentHtml} }></p>
-        <button type="button" onClick={ this.props.updatePreview }>
-          Render
-        </button>
       </div>
     )
   }
@@ -24,5 +19,4 @@ export default class Editor extends Component {
 Editor.propTypes = {
   contentMd: PropTypes.string.isRequired,
   updatePreview: PropTypes.func.isRequired,
-  contentHtml: PropTypes.string.isRequired
 }
