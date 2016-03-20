@@ -13,6 +13,9 @@ export default class Counter extends React.Component {
         <button onClick={ this.props.incrementCount }>
           Increment
         </button>
+        <button onClick={ this.props.decrementCount }>
+          Decrement
+        </button>
       </div>
     )
   }
@@ -20,5 +23,6 @@ export default class Counter extends React.Component {
 
 Counter.propTypes = {
   count: PropTypes.number.isRequired,
-  incrementCount: PropTypes.func.isRequired
+  incrementCount: PropTypes.func.isRequired,
+  decrementCount: PropTypes.func.isRequired
 }
