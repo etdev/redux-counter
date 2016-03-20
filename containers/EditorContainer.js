@@ -18,7 +18,7 @@ export default class EditorContainer extends Component {
 
   render() {
     return (
-      <div className="spitz">
+      <div className="editor-container">
         <Editor
           contentMd={this.state.contentMd}
           contentHtml={this.state.contentHtml}

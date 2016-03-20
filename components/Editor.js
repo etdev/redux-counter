@@ -8,11 +8,11 @@ export default class Editor extends Component {
   render() {
     return (
       <div>
-        Markdown Content
+        <p>Markdown Content:</p>
         <textarea id="ta-editor" value={ this.props.contentMd } onChange={ this.props.updatePreview }>
         </textarea>
-        Rendered Content
-        <p> { this.props.contentHtml } </p>
+        <p>Rendered Content:</p>
+        <p dangerouslySetInnerHTML={ {__html: this.props.contentHtml} }></p>
         <button type="button" onClick={ this.props.updatePreview }>
           Render
         </button>
