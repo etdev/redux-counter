@@ -6,7 +6,7 @@ const rootEl = document.getElementById("root")
 
 const render = () => {
   ReactDOM.render(
-    <Counter />,
+    <Counter count={ 5 }/>,
     rootEl
   )
 }
