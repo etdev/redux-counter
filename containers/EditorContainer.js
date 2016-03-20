@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from "react"
 import Editor from "../components/Editor"
+import Remarkable from "remarkable"
+const md = new Remarkable
 
 export default class EditorContainer extends Component {
   constructor(props) {
@@ -9,7 +11,8 @@ export default class EditorContainer extends Component {
   }
 
   updatePreview() {
-    this.setState({ contentHtml: "CHANGED" })
+    let contentMd = document.getElementById("ta-editor").value
+    this.setState({ contentMd: contentMd, contentHtml: md.render(contentMd) })
     console.log("updatePreview called in EditorContainer")
   }
 
